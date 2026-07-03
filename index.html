@@ -4,58 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator project</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
+    <div id="hero">
     <div id="main">
-    <div>
-        <input type="text">
+      
+        <input type="text" id="data">
     
     </div>
     <div class="btnGroup">
-         <button id="btn">c</button>
+          <div class="twobtns">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 Cbtn" id="btn">C</button>
+         <button type="button" class="btn btn-success boxequal box">/</button>
+          </div>
         <div>
-           
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        
-        
+        <button type="button" class="btn btn-primary box">7</button>
+<button type="button" class="btn btn-secondary box">8</button>
+<button type="button" class="btn btn-success box">9</button>
+<button type="button" class="btn btn-danger box">*</button>
         </div>
           <div>
-            
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        
-        
+         <button type="button" class="btn btn-primary box">4</button>
+<button type="button" class="btn btn-secondary box">5</button>
+<button type="button" class="btn btn-success box">6</button>
+<button type="button" class="btn btn-danger box">-</button>
         </div>
           <div>
-            
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        
-        
+         <button type="button" class="btn btn-primary box">1</button>
+<button type="button" class="btn btn-secondary box">2</button>
+<button type="button" class="btn btn-success box">3</button>
+<button type="button" class="btn btn-danger box">+</button>
         </div>
           <div>
-           
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        
-        
+         <button type="button" class="btn btn-primary box point">.</button>
+<button type="button" class="btn btn-secondary box ">0</button>
+ <button type="button" class="btn  " id="res">=</button>
         </div>
-        
     </div>
 </div>
 </div>
 
+
+
+
+
     <script src="app.js"></script>
+   <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

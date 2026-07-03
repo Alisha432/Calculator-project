@@ -1,42 +1,229 @@
-/* *{
-    margin: 0;
+*{
     padding: 0;
-} */
+    margin: 0;
+    box-sizing: border-box;
+}
 
+
+
+/* Smooth transition for everything */
+
+button{
+    color: black !important;
+}
+
+input{
+    text-align: right;
+
+}
+
+#hero, input, button{
+    transition: all 0.25s ease-in-out;
+     
+}
+
+/* Calculator card animation */
+#hero{
+    animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn{
+    from{
+        opacity: 0;
+        transform: scale(0.9) translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Input hover + focus smooth effect */
+input:hover{
+    transform: scale(1.01);
+}
+
+input:focus{
+    transform: scale(1.02);
+}
+
+/* Button hover animation */
+.box, .Cbtn, .boxequal, #res{
+    transition: all 0.2s ease;
+}
+
+.box:hover, .Cbtn:hover, .boxequal:hover, #res:hover{
+    transform: translateY(-3px);
+    color: black;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Button click (press effect) */
+.box:active, .Cbtn:active, .boxequal:active, #res:active{
+    transform: scale(0.92);
+    color: black;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Special glow for equal button */
+#res:hover{
+    box-shadow: 0 0 12px rgba(226, 173, 203, 0.6);
+}
+
+/* Smooth appearance for button rows */
+.btnGroup div{
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+    color: black;
+}
+
+/* stagger effect */
+.btnGroup div:nth-child(1){ animation-delay: 0.1s; }
+.btnGroup div:nth-child(2){ animation-delay: 0.2s; }
+.btnGroup div:nth-child(3){ animation-delay: 0.3s; }
+.btnGroup div:nth-child(4){ animation-delay: 0.4s; }
+.btnGroup div:nth-child(5){ animation-delay: 0.5s; }
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: #eccafd;
+}
 
 .container{
     width: 100%;
     height: 100vh;
-    background-color: rgb(211, 89, 89);
+   
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+#hero{
+    display: flex;
+    padding: 20px 10px 15px 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 20px !important;
+   flex-direction: column;
+   margin-top: 10px;
+}
+
+
 #main{
-    width: 50%;
-    height: 60vh;
-background-color: aqua;
-padding: 20px 30px;
 display: flex;
 flex-direction: column;
 gap: 50px;
 
 
+
 }
 
-#btn{
-    width: 30%;
-}
 
-button{
-    width: 20%;
-    margin-left: 10px;
-}
 
 .btnGroup{
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
     column-gap: 20px;
+}
+
+
+
+.box{
+       width: 35px !important;
+   height: 34px !important;
+   border-radius: 50% !important;
+    background-color: #ecf0f3 !important;
+   text-align: center !important;
+     padding: 0px !important;
+    outline: none !important;
+    border: none !important;
+}
+
+
+
+input{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #ebf4f3;
+    border: 2px solid #c1d7d5;
+    height: 15vh;
+    /* box-shadow: 0 8px 20px #ebebeb80; */
+     box-shadow: 0 0 8px rgba(42, 157, 143, 0.15);
+}
+
+
+input:focus{
+   border: 2px solid #2a9d8f;
+   box-shadow: 0 2 8px rgba(42, 157, 143, 0.25);
+}
+
+.Cbtn{
+   width: 73px !important;
+   height: 31px !important;
+   border-radius: 10px !important;
+    background-color: #ecf0f3 !important;
+    color: var(--text) !important;
+   text-align: center !important;
+     padding: 0px !important;
+    outline: none !important;
+    border: none !important;
+
+}
+
+#res{
+    width: 40%  !important;
+    height: 31px !important;
+    padding: 0px !important;
+    margin-left: 11px !important;
+    background-color: #e2adcb !important;
+}
+
+
+.twobtns{
+    padding-top: 20px !important;
+    display: flex !important;
+   gap: 20px  !important;
+   outline: none !important;
+   border: none !important;
+}
+
+
+.boxequal{
+       width: 62px !important;
+   height: 31px !important;
+   border-radius: 10px !important;
+    background-color: #ecf0f3!important;
+    color: var(--text) !important;
+   text-align: center !important;
+     padding: 0px !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.point{
+    text-align: center !important;
 }
